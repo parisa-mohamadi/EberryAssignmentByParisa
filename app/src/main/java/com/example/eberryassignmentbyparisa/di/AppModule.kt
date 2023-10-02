@@ -9,14 +9,12 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.create
 import javax.inject.Singleton
 
 /**
  * AppModule is a Dagger Hilt module responsible for providing application-wide dependencies.
- * These include the WeatherApi instance for making weather data API requests and
- * the FusedLocationProviderClient for location services.
+ * These include the TvShowsApi instance for making data API requests
  */
 
 @Module

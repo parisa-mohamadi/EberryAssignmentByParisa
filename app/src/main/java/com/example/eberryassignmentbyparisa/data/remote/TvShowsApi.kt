@@ -1,7 +1,6 @@
 package com.example.eberryassignmentbyparisa.data.remote
 
 import com.example.eberryassignmentbyparisa.domain.model.SearchResponse
-import com.example.eberryassignmentbyparisa.domain.model.Show
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -11,11 +10,6 @@ import retrofit2.http.Query
  */
 
 interface TvShowsApi {
-
-    @GET("shows")
-    suspend fun getTVShows(
-    ): List<Show>
-
     @GET("search/shows")
     suspend fun multiSearch(
         @Query("q") query: String,
