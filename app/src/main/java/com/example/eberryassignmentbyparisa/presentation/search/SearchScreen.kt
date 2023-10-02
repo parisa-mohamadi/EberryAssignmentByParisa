@@ -31,28 +31,29 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import coil.compose.rememberAsyncImagePainter
 import com.example.eberryassignmentbyparisa.R
 import com.example.eberryassignmentbyparisa.domain.model.SearchResponse
-import com.example.eberryassignmentbyparisa.presentation.tvShowsdetails.TvShowsDetailsScreen
+import com.example.eberryassignmentbyparisa.domain.util.Screen
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchScreen(
-    searchViewModel: SearchViewModel = hiltViewModel(),
+    navController: NavController,
+    searchViewModel: SearchViewModel = hiltViewModel()
 ) {
 
     val query: MutableState<String> = remember { mutableStateOf("") }
     val result = searchViewModel.searchResult.value
     Surface(modifier = Modifier.fillMaxSize()) {
         Column(modifier = Modifier.padding(8.dp)) {
-            Log.d("parisa", query.value)
             OutlinedTextField(
                 value = query.value, onValueChange = {
                     query.value = it
                     searchViewModel.searchAll(query.value)
-                        .also { Log.d("parisa", "while passing: ${query.value}") }
+                        .also { Log.d("TAG", "while passing: ${query.value}") }
 
                 }, enabled = true,
                 singleLine = true,
@@ -88,7 +89,11 @@ fun SearchScreen(
                     searchViewModel.searchResult.value.data?.let {
                         items(it) {
                             MainContentItem(it){ clickedItem ->
-                                Log.d("parisa", "itemclicked:${it.show.genres}")
+                                navController.currentBackStackEntry?.savedStateHandle?.set(
+                                    key = "selectedTvShow",
+                                    value = it
+                                )
+                                navController.navigate(Screen.TvShowsDetailsScreen.route)
                             }
                         }
                     }

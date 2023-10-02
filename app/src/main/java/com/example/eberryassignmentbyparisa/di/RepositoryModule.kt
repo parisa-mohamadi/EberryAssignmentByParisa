@@ -1,12 +1,9 @@
 package com.example.eberryassignmentbyparisa.di
 
-import com.example.eberryassignmentbyparisa.data.repository.RemoteDataSourceImpl
 import com.example.eberryassignmentbyparisa.data.repository.Repository
-import com.example.eberryassignmentbyparisa.domain.repository.RemoteDataSource
 import com.example.eberryassignmentbyparisa.domain.use_cases.GetTvShowsUseCase
 import com.example.eberryassignmentbyparisa.domain.use_cases.MultiSearchUseCase
 import com.example.eberryassignmentbyparisa.domain.use_cases.UseCases
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
