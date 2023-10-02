@@ -6,7 +6,7 @@ import com.example.eberryassignmentbyparisa.domain.util.Resource
 
 interface RemoteDataSource {
 
-    suspend fun getTVShows(): Resource<Show>
+    suspend fun getTVShows(): Resource<List<Show>>
 
     suspend fun multiSearch(query: String): Resource<List<SearchResponse>>
 }

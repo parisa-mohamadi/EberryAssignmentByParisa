@@ -20,7 +20,7 @@ class RemoteDataSourceImpl @Inject constructor(
 ): RemoteDataSource {
 
     @RequiresApi(Build.VERSION_CODES.O)
-    override suspend fun getTVShows(): Resource<Show> {
+    override suspend fun getTVShows(): Resource<List<Show>> {
         return try {
             Resource.Success(
                 data = api.getTVShows()

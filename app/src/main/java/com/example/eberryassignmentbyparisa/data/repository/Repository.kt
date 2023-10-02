@@ -11,7 +11,7 @@ class Repository @Inject constructor(
     private val remote: RemoteDataSource,
 ) {
 
-    suspend fun getTVShows(): Resource<Show> {
+    suspend fun getTVShows(): Resource<List<Show>> {
         return remote.getTVShows()
     }
 

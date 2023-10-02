@@ -14,7 +14,7 @@ interface TvShowsApi {
 
     @GET("shows")
     suspend fun getTVShows(
-    ): Show
+    ): List<Show>
 
     @GET("search/shows")
     suspend fun multiSearch(

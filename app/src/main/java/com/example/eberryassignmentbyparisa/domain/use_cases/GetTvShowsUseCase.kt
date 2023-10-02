@@ -8,7 +8,7 @@ import com.example.eberryassignmentbyparisa.domain.util.Resource
 class GetTvShowsUseCase(
     private val repository: Repository
 ) {
-    suspend operator fun invoke(): Resource<Show> {
+    suspend operator fun invoke(): Resource<List<Show>> {
         return repository.getTVShows()
     }
 }
