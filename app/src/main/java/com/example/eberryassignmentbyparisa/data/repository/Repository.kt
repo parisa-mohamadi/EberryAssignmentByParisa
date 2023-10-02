@@ -1,7 +1,7 @@
 package com.example.eberryassignmentbyparisa.data.repository
 
 import com.example.eberryassignmentbyparisa.domain.model.SearchResponse
-import com.example.eberryassignmentbyparisa.domain.model.TvShowsDetails
+import com.example.eberryassignmentbyparisa.domain.model.Show
 import com.example.eberryassignmentbyparisa.domain.repository.RemoteDataSource
 import com.example.eberryassignmentbyparisa.domain.util.Resource
 
@@ -11,7 +11,7 @@ class Repository @Inject constructor(
     private val remote: RemoteDataSource,
 ) {
 
-    suspend fun getTVShows(): Resource<TvShowsDetails> {
+    suspend fun getTVShows(): Resource<Show> {
         return remote.getTVShows()
     }
 

@@ -4,7 +4,7 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import com.example.eberryassignmentbyparisa.data.remote.TvShowsApi
 import com.example.eberryassignmentbyparisa.domain.model.SearchResponse
-import com.example.eberryassignmentbyparisa.domain.model.TvShowsDetails
+import com.example.eberryassignmentbyparisa.domain.model.Show
 import com.example.eberryassignmentbyparisa.domain.repository.RemoteDataSource
 import com.example.eberryassignmentbyparisa.domain.util.Resource
 import javax.inject.Inject
@@ -20,7 +20,7 @@ class RemoteDataSourceImpl @Inject constructor(
 ): RemoteDataSource {
 
     @RequiresApi(Build.VERSION_CODES.O)
-    override suspend fun getTVShows(): Resource<TvShowsDetails> {
+    override suspend fun getTVShows(): Resource<Show> {
         return try {
             Resource.Success(
                 data = api.getTVShows()
