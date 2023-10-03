@@ -10,6 +10,7 @@ This is an Android app that allows a user to search for TV shows using modern An
 - Dagger Hilt which provides a smooth dependency injection way in android.
 - Fetches search data using Retrofit and displays it using Gson Converter.
 - Each class has their own short comment to understad easily.
+- Includes unit tests for critical app components.
 
 ## Prerequisites
 Android Studio (latest version)
@@ -44,6 +45,7 @@ The app follows the MVI architecture which is basically MVVM but with added feat
 - ViewModel: For managing UI-related data in a lifecycle-conscious way.
 - Coroutines: for asynchronous programming.
 - Coil: simplifies image loading from the internet.
+- Mockito: used in unit testing to create and handle mock objects.
 
 ## Usage
 1. Launch the app on your emulator or device.
@@ -52,6 +54,14 @@ The app follows the MVI architecture which is basically MVVM but with added feat
 4. after loading display the results in grid with 2 column.
 5. Explore the detailed about each Tvshow via clicking.
 
+## Unit Tests
+The app includes unit tests to ensure the correctness of critical app components. To run unit tests:
+
+1. Open the project in Android Studio.
+1. Navigate to the test directory under src.
+1. Right-click on the test class you want to run.
+1. Select "Run" to execute the tests.
+  
 ## Contributing
 Contributions are welcome! If you find any issues or want to add new features, feel free to reach out to me at 
 mohamadiparisa312@gmail.com.
