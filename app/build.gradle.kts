@@ -79,6 +79,8 @@ dependencies {
     kapt ("com.google.dagger:hilt-android-compiler:2.44.1")
     kapt ("androidx.hilt:hilt-compiler:1.0.0")
     implementation ("androidx.hilt:hilt-navigation-compose:1.0.0")
+    testImplementation ("com.google.dagger:hilt-android-testing:2.44.1")
+    kaptTest ("com.google.dagger:hilt-android-compiler:2.44.1")
 
     // Retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
@@ -87,6 +89,10 @@ dependencies {
 
     // Coil
     implementation ("io.coil-kt:coil-compose:2.4.0")
+
+    //Coroutines
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
 
     //Unit test
     testImplementation ("org.mockito.kotlin:mockito-kotlin:5.1.0")
