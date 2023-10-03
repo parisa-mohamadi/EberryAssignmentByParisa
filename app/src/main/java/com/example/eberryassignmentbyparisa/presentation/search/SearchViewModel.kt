@@ -11,6 +11,11 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+/**
+ * ViewModel class for managing search-related UI logic and data.
+ * @param useCases The use cases for fetching search results.
+ */
+
 @HiltViewModel
 class SearchViewModel @Inject constructor(
     private val useCases: UseCases,

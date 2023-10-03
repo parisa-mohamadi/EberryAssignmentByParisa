@@ -10,6 +10,11 @@ import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import javax.inject.Singleton
 
+/**
+ * Dagger Hilt module for providing [UseCases] dependencies.
+ * @see UseCases
+ */
+
 @ExperimentalCoroutinesApi
 @Module
 @InstallIn(SingletonComponent::class)
