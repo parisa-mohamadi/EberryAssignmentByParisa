@@ -88,5 +88,9 @@ dependencies {
     // Coil
     implementation ("io.coil-kt:coil-compose:2.4.0")
 
+    //Unit test
+    testImplementation ("org.mockito.kotlin:mockito-kotlin:5.1.0")
+
     implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
+    
 }
